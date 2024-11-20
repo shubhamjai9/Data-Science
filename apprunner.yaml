@@ -10,6 +10,11 @@ build:
     - name: PORT
       value: '8080'
 run:
+  pre-run:
+    - pip3 install gunicorn
+    - pip3 install -r requirements.txt
+    - which gunicorn
+    - pip3 list
   command: pip3 list
   command: ls /usr/bin
   command: ls
