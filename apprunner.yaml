@@ -8,7 +8,7 @@ build:
 
   env: # define environment variables
     - name: PORT
-      value: '5000'
+      value: '8002'
 run:
   pre-run:
     - pip3 install gunicorn
