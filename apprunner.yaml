@@ -4,7 +4,8 @@ build:
   commands:
     build:
       - python3 --version
-      - pip3 install -r requirements.txt # install dependencies
+      - echo $PATH
+      - which python
 
   env: # define environment variables
     - name: PORT
@@ -15,6 +16,8 @@ run:
     - pip3 install -r requirements.txt
     - which gunicorn
     - pip3 list
+    - echo $PATH
+    - which python
   command: pip3 list
   # command: python3 -m uvicorn app:app --host 0.0.0.0 --port 8080 --workers 1
   command: python3 -m uvicorn app:app --host 0.0.0.0 --port 8002 --workers 1
